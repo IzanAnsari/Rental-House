@@ -114,98 +114,92 @@
         - #FEATURED CAR
       -->
 
-            <section class="section featured-car" id="featured-car" style="margin-top: 200;">
-                <div class="container01">
-                    <header>Share Your Room</header>
-                    <form action="#">
-                        <div class="form first">
-                            <div class="details personal">
-                                <span class="title">Personal Details</span>
-                                <div class="fields">
-                                    <div class="input-field">
-                                        <label>Full Name</label>
-                                        <input type="text" placeholder="Enter your name" required>
-                                    </div>
-                                    <div class="input-field">
-                                        <label>Date of Birth</label>
-                                        <input type="date" placeholder="Enter birth date" required>
-                                    </div>
-                                    <div class="input-field">
-                                        <label>Email</label>
-                                        <input type="text" placeholder="Enter your email" required>
-                                    </div>
-                                    <div class="input-field">
-                                        <label>Mobile Number</label>
-                                        <input type="number" placeholder="Enter mobile number" required>
-                                    </div>
-                                    <div class="input-field">
-                                        <label>Nationality</label>
-                                        <input type="text" placeholder="Enter your ccupation" required>
-                                    </div>
-                                    <div class="input-field">
-                                        <label>Occupation</label>
-                                        <input type="text" placeholder="Enter your ccupation" required>
-                                    </div>
-                                </div>
+      <section class="section featured-car" id="featured-car" style="margin-top: 200;">
+        <div class="container01">
+            <header>Share Your Room</header>
+            <form id="roomForm">
+                <div class="form first">
+                    <div class="details personal">
+                        <span class="title">Personal Details</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Full Name</label>
+                                <input type="text" name="fullName" placeholder="Enter your name" required>
                             </div>
-                            <div class="details ID">
-                                <span class="title">Rooms Details</span>
-                                <div class="fields">
-                                    <div class="input-field">
-                                        <label>CheckIn Date</label>
-                                        <input type="date" placeholder="Enter expiry date" required>
-                                    </div>
-                                    <div class="input-field">
-                                        <label>CheckOut Date</label>
-                                        <input type="date" placeholder="Enter expiry date" required>
-                                    </div>
-                                    <div class="input-field">
-                                        <label>Destination</label>
-                                        <input type="number" placeholder="Enter ID number" required>
-                                    </div>
-
-                                </div>
-                                <div class="details ID">
-                                    <span class="title">Profile</span>
-                                    <div class="fields">
-                                        <div class="input-field">
-                                            <label>Interest</label>
-                                            <input type="text" placeholder="Enter issued state" required>
-                                        </div>
-                                        <div class="input-field">
-                                            <label>Hobbiies</label>
-                                            <input type="text" placeholder="Enter your issued date" required>
-                                        </div>
-                                        <div class="input-field">
-                                            <label>Smoker</label>
-
-                                            <select required>
-                                                <option disabled selected>Smoking</option>
-                                                <option>Yes</option>
-                                                <option>No</option>
-
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="details ID">
-                                    <span class="title">Share You Story</span>
-                                    <div class="fields">
-                                        <div class="input-field">
-                                            <label>Say About Your Self</label>
-                                            <input type="text" placeholder="Enter issued state" required>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                <button class="nextBtn">
-                                    <span class="btnText">Submit</span>
-                                    <i class="uil uil-navigator"></i>
-                                </button>
+                            <div class="input-field">
+                                <label>Date of Birth</label>
+                                <input type="date" name="dob" placeholder="Enter birth date" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Email</label>
+                                <input type="email" name="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Mobile Number</label>
+                                <input type="tel" name="mobileNumber" placeholder="Enter mobile number" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Nationality</label>
+                                <input type="text" name="nationality" placeholder="Enter your nationality" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Occupation</label>
+                                <input type="text" name="occupation" placeholder="Enter your occupation" required>
                             </div>
                         </div>
-
-            </section>
+                    </div>
+                    <div class="details ID">
+                        <span class="title">Rooms Details</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>CheckIn Date</label>
+                                <input type="date" name="checkInDate" placeholder="Enter check-in date" required>
+                            </div>
+                            <div class="input-field">
+                                <label>CheckOut Date</label>
+                                <input type="date" name="checkOutDate" placeholder="Enter check-out date" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Destination</label>
+                                <input type="text" name="destination" placeholder="Enter destination" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details ID">
+                        <span class="title">Profile</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Interest</label>
+                                <input type="text" name="interest" placeholder="Enter your interests" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Hobbies</label>
+                                <input type="text" name="hobbies" placeholder="Enter your hobbies" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Smoker</label>
+                                <select name="smoker" required>
+                                    <option disabled selected>Smoking</option>
+                                    <option>Yes</option>
+                                    <option>No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details ID">
+                        <span class="title">Share Your Story</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Say About Yourself</label>
+                                <input type="text" name="aboutYourself" placeholder="Tell us about yourself" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <button class="btnText" onclick="submitForm()" style="background-color: hsl(204, 100%, 62%); padding: 10px 10px; border-radius: 10px; color: aliceblue;">Submit</button>
+        </div>
+    </section>
 
 
 
@@ -395,6 +389,39 @@
     - custom js link
   -->
     <script src="./assets/js/script.js"></script>
+    <script>
+         function submitForm() {
+            // Get form data
+            const formData = new FormData(document.getElementById('roomForm'));
+            const jsonData = {};
+
+            // Convert FormData to JSON
+            formData.forEach((value, key) => {
+                jsonData[key] = value;
+            });
+
+            // Make POST request to API
+            fetch('http://localhost:3000/share', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(jsonData)
+            })
+            .then(response => {
+                if (response.ok) {
+                    console.log('Data submitted successfully');
+                    // Optionally, you can reset the form after successful submission
+                    document.getElementById('roomForm').reset();
+                } else {
+                    console.error('Failed to submit data');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
 
     <!-- 
     - ionicon link

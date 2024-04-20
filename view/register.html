@@ -1,70 +1,108 @@
 <!DOCTYPE html>
 <!-- Coding by CodingLab | www.codinglabweb.com-->
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Responsive Login and Signup Form </title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Login and Signup Form</title>
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="../assets/css/loginAndRegister.css">
-                
-        <!-- Boxicons CSS -->
-        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-                        
-    </head>
-    <body>
-        <section class="container forms">
-            <div class="form login">
-                <div class="form-content">
-                    <header>Signup</header>
-                    <form action="#">
-                        <div class="field input-field">
-                            <input type="email" placeholder="Email" class="input">
-                        </div>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/loginAndRegister.css">
 
-                        <div class="field input-field">
-                            <input type="password" placeholder="Create password" class="password">
-                        </div>
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
-                        <div class="field input-field">
-                            <input type="password" placeholder="Confirm password" class="password">
-                            <i class='bx bx-hide eye-icon'></i>
-                        </div>
-
-                        <div class="field button-field">
-                            <button id="loginButton">Signup</button>
-                        </div>
-                    </form>
-
-                    <div class="form-link">
-                        <span>Already have an account? <a href="./login.html" class="forgot-pass">Login</a></span>
-                    </div>
+</head>
+<body>
+<section class="container forms">
+    <div class="form login">
+        <div class="form-content">
+            <header>Signup</header>
+            <form id="signupForm">
+                <div class="field input-field">
+                    <input type="email" placeholder="Email" class="input" id="email" required>
                 </div>
 
-                <div class="line"></div>
-
-                <div class="media-options">
-                    <a href="#" class="field facebook">
-                        <i class='bx bxl-facebook facebook-icon'></i>
-                        <span>Login with Facebook</span>
-                    </a>
+                <div class="field input-field">
+                    <input type="password" placeholder="Create password" class="password" id="password" required>
                 </div>
 
-                <div class="media-options">
-                    <a href="#" class="field google">
-                        <img src="../assets/images/google.png" alt="" class="google-img">
-                        <span>Login with Google</span>
-                    </a>
+                <div class="field input-field">
+                    <input type="password" placeholder="Confirm password" class="password" id="confirmPassword" required>
+                    <i class='bx bx-hide eye-icon'></i>
                 </div>
 
+                <div class="field button-field">
+                    <button type="submit" id="loginButton">Signup</button>
+                </div>
+            </form>
+
+            <div class="form-link">
+                <span>Already have an account? <a href="./login.html" class="forgot-pass">Login</a></span>
             </div>
+        </div>
 
-           
-        </section>
+        <div class="line"></div>
 
-        <!-- JavaScript -->
-        <script src="../assets/js/loginAndRegister.js"></script>
-    </body>
+        <div class="media-options">
+            <a href="#" class="field facebook">
+                <i class='bx bxl-facebook facebook-icon'></i>
+                <span>Login with Facebook</span>
+            </a>
+        </div>
+
+        <div class="media-options">
+            <a href="#" class="field google">
+                <img src="../assets/images/" alt="" class="google-img">
+                <span>Login with Google</span>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- JavaScript -->
+<script src="../assets/js/loginAndRegister.js"></script>
+<script>
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirmPassword').value;
+
+        // Check if passwords match
+        if (password !== confirmPassword) {
+            alert("Passwords do not match.");
+            return;
+        }
+
+        // Prepare data for POST request
+        const userData = {
+            email: email,
+            password: password
+        };
+
+        // Send POST request to API
+        fetch('http://localhost:3000/users', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(userData),
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Handle response from API
+            console.log('Success:', data);
+            alert('Signup successful!');
+            // You can redirect to login page or do something else here
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert('An error occurred. Please try again later.');
+        });
+    });
+</script>
+</body>
 </html>

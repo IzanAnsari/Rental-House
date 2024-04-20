@@ -30,9 +30,3 @@ for (let i = 0; i < navbarLinks.length; i++) {
 
 const header = document.querySelector("[data-header]");
 
-window.addEventListener("scroll", function () {
-  window.scrollY >= 10 ? header.classList.add("active")
-    : header.classList.remove("active");
-});
-
-
