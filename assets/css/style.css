@@ -983,7 +983,7 @@ button, a { transition: var(--transition); }
 
   .hero-banner {
     display: block;
-    background: url("../images/hero-banner.jpg") no-repeat;
+    background: url("https://c8.alamy.com/comp/G5879Y/four-young-women-lying-on-the-bed-in-their-hotel-room-they-are-smiling-G5879Y.jpg") no-repeat;
     background-size: cover;
     background-position: left;
     position: absolute;
@@ -1004,14 +1004,11 @@ button, a { transition: var(--transition); }
   .featured-car-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
 
-
   /**
    * GET START
    */
 
   .get-start-list { grid-template-columns: 1fr 1fr; }
-
-
 
   /**
    * FOOTER
