@@ -33,65 +33,63 @@
     - #HEADER
   -->
 
-    <header class="header" data-header>
-        <div class="container">
-
-            <div class="overlay" data-overlay></div>
-
-            <a href="#" class="logo">
-                <img src="../assets/images/logo.svg" alt="Ridex logo">
-            </a>
-
-            <nav class="navbar" data-navbar>
-                <ul class="navbar-list">
-
-                    <li>
-                        <a href="#home" class="navbar-link" data-nav-link>Home</a>
-                    </li>
-
-                    <li>
-                        <a href="#featured-car" class="navbar-link" data-nav-link>Safety</a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="navbar-link" data-nav-link>Adventure</a>
-                    </li>
-
-                    <li>
-                        <a href="#blog" class="navbar-link" data-nav-link>Community</a>
-                    </li>
-
-                </ul>
-            </nav>
-
-            <div class="header-actions">
-
-                <div class="header-contact">
-                    <a href="tel:88002345678" class="contact-link">8 800 234 56 78</a>
-
-                    <span class="contact-time">Mon - Sat: 9:00 am - 6:00 pm</span>
-                </div>
-
-                <a href="./view/register.html" class="btn" aria-labelledby="aria-label-txt">
-                    <ion-icon name="car-outline"></ion-icon>
-
-                    <span id="aria-label-txt">Register</span>
-                </a>
-
-                <a href="./view/login.html" class="btn user-btn" aria-label="Profile">
-                    <ion-icon name="person-outline"></ion-icon>
-                </a>
-
-                <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
-                    <span class="one"></span>
-                    <span class="two"></span>
-                    <span class="three"></span>
-                </button>
-
-            </div>
-
+  <header class="header" data-header>
+    <div class="container">
+  
+      <div class="overlay" data-overlay></div>
+  
+      <a href="#" class="logo">
+        <h2 style="color: hsl(204, 76%, 55%);">SheShare Dream Destinations</h2>
+      </a>
+  
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+  
+          <li>
+            <a href="#home" class="navbar-link" data-nav-link>Home</a>
+          </li>
+  
+          <li>
+            <a href="#safety" class="navbar-link" data-nav-link>Safety</a>
+          </li>
+  
+          <li>
+            <a href="#featured-car" class="navbar-link" data-nav-link>Adventure</a>
+          </li>
+  
+          <li>
+            <a href="#blog" class="navbar-link" data-nav-link>Community</a>
+          </li>
+  
+        </ul>
+      </nav>
+  
+      <div class="header-actions">
+  
+        <div class="header-contact">
+          <a href="tel:88002345678" class="contact-link">8 800 234 56 78</a>
+          <span class="contact-time">Mon - Sat: 9:00 am - 6:00 pm</span>
         </div>
-    </header>
+  
+        <a href="./view/register.html" class="btn register-btn" aria-labelledby="aria-label-txt">
+          <ion-icon name="car-outline"></ion-icon>
+          <span id="register-label">Register</span>
+        </a>
+  
+        <a href="./view/login.html" class="btn user-btn" aria-label="Profile">
+          <ion-icon name="person-outline"></ion-icon>
+        </a>
+  
+        <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+        </button>
+  
+      </div>
+  
+    </div>
+  </header>
 
 
 
@@ -114,104 +112,18 @@
         - #FEATURED CAR
       -->
 
-      <section class="section featured-car" id="featured-car" style="margin-top: 200;">
-        <div class="container01">
-            <header>Share Your Room</header>
-            <form id="roomForm">
-                <div class="form first">
-                    <div class="details personal">
-                        <span class="title">Personal Details</span>
-                        <div class="fields">
-                            <div class="input-field">
-                                <label>Full Name</label>
-                                <input type="text" name="fullName" placeholder="Enter your name" required>
-                            </div>
-                            <div class="input-field">
-                                <label>Date of Birth</label>
-                                <input type="date" name="dob" placeholder="Enter birth date" required>
-                            </div>
-                            <div class="input-field">
-                                <label>Email</label>
-                                <input type="email" name="email" placeholder="Enter your email" required>
-                            </div>
-                            <div class="input-field">
-                                <label>Mobile Number</label>
-                                <input type="tel" name="mobileNumber" placeholder="Enter mobile number" required>
-                            </div>
-                            <div class="input-field">
-                                <label>Nationality</label>
-                                <input type="text" name="nationality" placeholder="Enter your nationality" required>
-                            </div>
-                            <div class="input-field">
-                                <label>Occupation</label>
-                                <input type="text" name="occupation" placeholder="Enter your occupation" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="details ID">
-                        <span class="title">Rooms Details</span>
-                        <div class="fields">
-                            <div class="input-field">
-                                <label>CheckIn Date</label>
-                                <input type="date" name="checkInDate" placeholder="Enter check-in date" required>
-                            </div>
-                            <div class="input-field">
-                                <label>CheckOut Date</label>
-                                <input type="date" name="checkOutDate" placeholder="Enter check-out date" required>
-                            </div>
-                            <div class="input-field">
-                                <label>Destination</label>
-                                <input type="text" name="destination" placeholder="Enter destination" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="details ID">
-                        <span class="title">Profile</span>
-                        <div class="fields">
-                            <div class="input-field">
-                                <label>Interest</label>
-                                <input type="text" name="interest" placeholder="Enter your interests" required>
-                            </div>
-                            <div class="input-field">
-                                <label>Hobbies</label>
-                                <input type="text" name="hobbies" placeholder="Enter your hobbies" required>
-                            </div>
-                            <div class="input-field">
-                                <label>Smoker</label>
-                                <select name="smoker" required>
-                                    <option disabled selected>Smoking</option>
-                                    <option>Yes</option>
-                                    <option>No</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="details ID">
-                        <span class="title">Share Your Story</span>
-                        <div class="fields">
-                            <div class="input-field">
-                                <label>Say About Yourself</label>
-                                <input type="text" name="aboutYourself" placeholder="Tell us about yourself" required>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
-            <button class="btnText" onclick="submitForm()" style="background-color: hsl(204, 100%, 62%); padding: 10px 10px; border-radius: 10px; color: aliceblue;">Submit</button>
-
-        </div>
-    </section>
+     
 
 
 
 
-    <section class="section featured-car" id="featured-car">
+      <section class="section featured-car" id="featured-car">
         <div class="container">
 
-          <div class="title-wrapper">
-            <h2 class="h2 section-title">Featured cars</h2>
+          <div class="title-wrapper" style="margin-top: 40px;">
+            <h2 class="h2 section-title">Rent a Room On Good Price</h2>
 
-            <a href="#" class="featured-car-link">
+            <a href="./view/rent.html" class="featured-car-link">
               <span>View more</span>
 
               <ion-icon name="arrow-forward-outline"></ion-icon>
@@ -232,10 +144,10 @@
 
                   <div class="card-title-wrapper">
                     <h3 class="h3 card-title">
-                      <a href="#">Toyota RAV4</a>
+                      <a href="#">New York City, New York</a>
                     </h3>
 
-                    <data class="year" value="2021">2021</data>
+                    <data class="year" value="2021">2024</data>
                   </div>
 
                   <ul class="card-list">
@@ -247,21 +159,21 @@
                     </li>
 
                     <li class="card-list-item">
-                      <ion-icon name="flash-outline"></ion-icon>
+                      <ion-icon name="car-sport-outline"></ion-icon>
 
-                      <span class="card-item-text">Hybrid</span>
+                      <span class="card-item-text">Private Parking</span>
                     </li>
 
                     <li class="card-list-item">
-                      <ion-icon name="speedometer-outline"></ion-icon>
+                      <ion-icon name="bed-outline"></ion-icon>
 
-                      <span class="card-item-text">6.1km / 1-litre</span>
+                      <span class="card-item-text">Extra Comfort</span>
                     </li>
 
                     <li class="card-list-item">
-                      <ion-icon name="hardware-chip-outline"></ion-icon>
+                      <ion-icon name="wifi-outline"></ion-icon>
 
-                      <span class="card-item-text">Automatic</span>
+                      <span class="card-item-text">Wifi Zone</span>
                     </li>
 
                   </ul>
@@ -276,7 +188,8 @@
                       <ion-icon name="heart-outline"></ion-icon>
                     </button>
 
-                    <button class="btn">Rent now</button>
+                                       <a href="/view/rentForm.html"><button class="btn">Rent now</button></a>
+
 
                   </div>
 
@@ -297,10 +210,10 @@
 
                   <div class="card-title-wrapper">
                     <h3 class="h3 card-title">
-                      <a href="#">BMW 3 Series</a>
+                      <a href="#">Los Angeles, California</a>
                     </h3>
 
-                    <data class="year" value="2019">2019</data>
+                    <data class="year" value="2019">2024</data>
                   </div>
 
                   <ul class="card-list">
@@ -312,21 +225,21 @@
                     </li>
 
                     <li class="card-list-item">
-                      <ion-icon name="flash-outline"></ion-icon>
+                      <ion-icon name="car-sport-outline"></ion-icon>
 
-                      <span class="card-item-text">Gasoline</span>
+                      <span class="card-item-text">Private Parking</span>
                     </li>
 
                     <li class="card-list-item">
-                      <ion-icon name="speedometer-outline"></ion-icon>
+                      <ion-icon name="bed-outline"></ion-icon>
 
-                      <span class="card-item-text">8.2km / 1-litre</span>
+                      <span class="card-item-text">Extra Comfort</span>
                     </li>
 
                     <li class="card-list-item">
-                      <ion-icon name="hardware-chip-outline"></ion-icon>
+                      <ion-icon name="wifi-outline"></ion-icon>
 
-                      <span class="card-item-text">Automatic</span>
+                      <span class="card-item-text">Wifi Zone</span>
                     </li>
 
                   </ul>
@@ -341,7 +254,8 @@
                       <ion-icon name="heart-outline"></ion-icon>
                     </button>
 
-                    <button class="btn">Rent now</button>
+                                       <a href="/view/rentForm.html"><button class="btn">Rent now</button></a>
+
 
                   </div>
 
@@ -362,10 +276,10 @@
 
                   <div class="card-title-wrapper">
                     <h3 class="h3 card-title">
-                      <a href="#">Volkswagen T-Cross</a>
+                      <a href="#">Chicago, Illinois</a>
                     </h3>
 
-                    <data class="year" value="2020">2020</data>
+                    <data class="year" value="2020">2024</data>
                   </div>
 
                   <ul class="card-list">
@@ -377,21 +291,21 @@
                     </li>
 
                     <li class="card-list-item">
-                      <ion-icon name="flash-outline"></ion-icon>
+                      <ion-icon name="car-sport-outline"></ion-icon>
 
-                      <span class="card-item-text">Gasoline</span>
+                      <span class="card-item-text">Private Parking</span>
                     </li>
 
                     <li class="card-list-item">
-                      <ion-icon name="speedometer-outline"></ion-icon>
+                      <ion-icon name="bed-outline"></ion-icon>
 
-                      <span class="card-item-text">5.3km / 1-litre</span>
+                      <span class="card-item-text">Extra Comfort</span>
                     </li>
 
                     <li class="card-list-item">
-                      <ion-icon name="hardware-chip-outline"></ion-icon>
+                      <ion-icon name="wifi-outline"></ion-icon>
 
-                      <span class="card-item-text">Automatic</span>
+                      <span class="card-item-text">Wifi Zone</span>
                     </li>
 
                   </ul>
@@ -406,7 +320,8 @@
                       <ion-icon name="heart-outline"></ion-icon>
                     </button>
 
-                    <button class="btn">Rent now</button>
+                                       <a href="/view/rentForm.html"><button class="btn">Rent now</button></a>
+
 
                   </div>
 
@@ -427,10 +342,10 @@
 
                   <div class="card-title-wrapper">
                     <h3 class="h3 card-title">
-                      <a href="#">Cadillac Escalade</a>
+                      <a href="#">Houston, Texas</a>
                     </h3>
 
-                    <data class="year" value="2020">2020</data>
+                    <data class="year" value="2020">2024</data>
                   </div>
 
                   <ul class="card-list">
@@ -442,21 +357,21 @@
                     </li>
 
                     <li class="card-list-item">
-                      <ion-icon name="flash-outline"></ion-icon>
+                      <ion-icon name="car-sport-outline"></ion-icon>
 
-                      <span class="card-item-text">Gasoline</span>
+                      <span class="card-item-text">Private Parking</span>
                     </li>
 
                     <li class="card-list-item">
-                      <ion-icon name="speedometer-outline"></ion-icon>
+                      <ion-icon name="bed-outline"></ion-icon>
 
-                      <span class="card-item-text">7.7km / 1-litre</span>
+                      <span class="card-item-text">Extra Comfort</span>
                     </li>
 
                     <li class="card-list-item">
-                      <ion-icon name="hardware-chip-outline"></ion-icon>
+                      <ion-icon name="wifi-outline"></ion-icon>
 
-                      <span class="card-item-text">Automatic</span>
+                      <span class="card-item-text">Wifi Zone</span>
                     </li>
 
                   </ul>
@@ -471,7 +386,8 @@
                       <ion-icon name="heart-outline"></ion-icon>
                     </button>
 
-                    <button class="btn">Rent now</button>
+                                       <a href="/view/rentForm.html"><button class="btn">Rent now</button></a>
+
 
                   </div>
 
@@ -492,10 +408,10 @@
 
                   <div class="card-title-wrapper">
                     <h3 class="h3 card-title">
-                      <a href="#">BMW 4 Series GTI</a>
+                      <a href="#">Philadelphia, Pennsylvania</a>
                     </h3>
 
-                    <data class="year" value="2021">2021</data>
+                    <data class="year" value="2021">2024</data>
                   </div>
 
                   <ul class="card-list">
@@ -507,21 +423,21 @@
                     </li>
 
                     <li class="card-list-item">
-                      <ion-icon name="flash-outline"></ion-icon>
+                      <ion-icon name="car-sport-outline"></ion-icon>
 
-                      <span class="card-item-text">Gasoline</span>
+                      <span class="card-item-text">Private Parking</span>
                     </li>
 
                     <li class="card-list-item">
-                      <ion-icon name="speedometer-outline"></ion-icon>
+                      <ion-icon name="bed-outline"></ion-icon>
 
-                      <span class="card-item-text">7.6km / 1-litre</span>
+                      <span class="card-item-text">Extra Comfort</span>
                     </li>
 
                     <li class="card-list-item">
-                      <ion-icon name="hardware-chip-outline"></ion-icon>
+                      <ion-icon name="wifi-outline"></ion-icon>
 
-                      <span class="card-item-text">Automatic</span>
+                      <span class="card-item-text">Wifi Zone</span>
                     </li>
 
                   </ul>
@@ -536,7 +452,8 @@
                       <ion-icon name="heart-outline"></ion-icon>
                     </button>
 
-                    <button class="btn">Rent now</button>
+                                       <a href="/view/rentForm.html"><button class="btn">Rent now</button></a>
+
 
                   </div>
 
@@ -557,10 +474,10 @@
 
                   <div class="card-title-wrapper">
                     <h3 class="h3 card-title">
-                      <a href="#">BMW 4 Series</a>
+                      <a href="#">Phoenix, Arizona</a>
                     </h3>
 
-                    <data class="year" value="2019">2019</data>
+                    <data class="year" value="2019">2024</data>
                   </div>
 
                   <ul class="card-list">
@@ -572,21 +489,21 @@
                     </li>
 
                     <li class="card-list-item">
-                      <ion-icon name="flash-outline"></ion-icon>
+                      <ion-icon name="car-sport-outline"></ion-icon>
 
-                      <span class="card-item-text">Gasoline</span>
+                      <span class="card-item-text">Private Parking</span>
                     </li>
 
                     <li class="card-list-item">
-                      <ion-icon name="speedometer-outline"></ion-icon>
+                      <ion-icon name="bed-outline"></ion-icon>
 
-                      <span class="card-item-text">7.2km / 1-litre</span>
+                      <span class="card-item-text">Extra Comfort</span>
                     </li>
 
                     <li class="card-list-item">
-                      <ion-icon name="hardware-chip-outline"></ion-icon>
+                      <ion-icon name="wifi-outline"></ion-icon>
 
-                      <span class="card-item-text">Automatic</span>
+                      <span class="card-item-text">Wifi Zone</span>
                     </li>
 
                   </ul>
@@ -601,7 +518,8 @@
                       <ion-icon name="heart-outline"></ion-icon>
                     </button>
 
-                    <button class="btn">Rent now</button>
+                                       <a href="/view/rentForm.html"><button class="btn">Rent now</button></a>
+
 
                   </div>
 
@@ -794,7 +712,7 @@
     <!-- 
     - custom js link
   -->
-    <script src="./assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
     <script>
          function submitForm() {
             // Get form data

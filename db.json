@@ -27,47 +27,55 @@
     }
   ],
   "share": [
+    
     {
-      "id": "1",
-      "title": "First Post",
-      "content": "This is the content of the first post."
-    },
-    {
-      "id": "2",
-      "title": "Second Post",
-      "content": "This is the content of the second post."
-    },
-    {
-      "id": "3a22",
+      "id": "ccbe",
       "fullName": "Izan Anasri",
-      "dob": "2024-05-01",
+      "dob": "2024-04-24",
       "email": "izanansari123@gmail.com",
       "mobileNumber": "09359237760",
-      "nationality": "indian",
-      "occupation": "sofldw",
-      "checkInDate": "2024-04-24",
-      "checkOutDate": "2024-04-10",
-      "destination": "london",
-      "interest": "titi",
-      "hobbies": "dkwdw",
-      "smoker": "Yes",
-      "aboutYourself": "kdasdadnasdscszcajjcnd"
+      "nationality": "Indian",
+      "occupation": "engineer",
+      "checkInDate": "0012-12-12",
+      "checkOutDate": "0021-12-11",
+      "destination": "322",
+      "interest": "game",
+      "hobbies": "book",
+      "image": "https://st.hzcdn.com/simgs/pictures/bedrooms/young-adult-female-bedroom-moda-interiors-img~b88174fa0a698a54_14-7136-1-6374806.jpg",
+      "aboutYourself": "izan kakmsaks"
     },
     {
-      "id": "23bb",
-      "fullName": "",
-      "dob": "",
-      "email": "",
-      "mobileNumber": "",
-      "nationality": "",
-      "occupation": "",
-      "checkInDate": "",
-      "checkOutDate": "",
-      "destination": "",
-      "interest": "",
-      "hobbies": "",
-      "aboutYourself": ""
-    }
+        "id": "ccbe",
+        "fullName": "Izan Anasri",
+        "dob": "2024-04-24",
+        "email": "izanansari123@gmail.com",
+        "mobileNumber": "09359237760",
+        "nationality": "Indian",
+        "occupation": "engineer",
+        "checkInDate": "0012-12-12",
+        "checkOutDate": "0021-12-11",
+        "destination": "322",
+        "interest": "game",
+        "hobbies": "book",
+        "image": "https://st.hzcdn.com/simgs/pictures/bedrooms/young-adult-female-bedroom-moda-interiors-img~b88174fa0a698a54_14-7136-1-6374806.jpg",
+        "aboutYourself": "izan kakmsaks"
+      },
+      {
+        "id": "ccbe",
+        "fullName": "Izan Anasri",
+        "dob": "2024-04-24",
+        "email": "izanansari123@gmail.com",
+        "mobileNumber": "09359237760",
+        "nationality": "Indian",
+        "occupation": "engineer",
+        "checkInDate": "0012-12-12",
+        "checkOutDate": "0021-12-11",
+        "destination": "322",
+        "interest": "game",
+        "hobbies": "book",
+        "image": "https://st.hzcdn.com/simgs/pictures/bedrooms/young-adult-female-bedroom-moda-interiors-img~b88174fa0a698a54_14-7136-1-6374806.jpg",
+        "aboutYourself": "izan kakmsaks"
+      }
   ],
   "rent": [
     {},
