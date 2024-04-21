@@ -11,17 +11,7 @@
       "email": "jane@example.com"
     },
     {
-      "id": "6ae6",
-      "email": "izanansari123@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "46f1",
-      "email": "izanansari123@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "6dc6",
+      "id": "db6d",
       "email": "izanansari123@gmail.com",
       "password": "123"
     }
@@ -45,7 +35,9 @@
     }
   ],
   "rent": [
-    {},
+    {
+      "id": "43f3"
+    },
     {
       "id": "1c42",
       "fullName": "MASTER REHAN AHMED JAMEEL AHMED ANSARI",
