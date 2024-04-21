@@ -1,334 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ridex - Rent your favourite car</title>
-
-    <!-- 
-    - favicon
-  -->
     <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-
-    <!-- 
-    - custom css link
-  -->
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/share.css">
-  <style>
-    #data-table td {
-    padding: 20px; /* Adjust this value as needed */
+    <style>
+        #data-table td {
+            padding: 20px; /* Adjust this value as needed */
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        #data-table {
+    border-collapse: collapse;
+    width: 100%;
 }
 
-  </style>
-    <!-- 
-    - google font link
-  -->
+#data-table th,
+#data-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#data-table th {
+    background-color: #f2f2f2;
+}
+
+#data-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#data-table tr:hover {
+    background-color: #ddd;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: hsl(204, 91%, 53%);
+    color: white;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+    opacity: 0.8;
+}
+
+    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-    <!-- 
-    - #HEADER
-  -->
-
-  <header class="header" data-header>
-    <div class="container">
-  
-      <div class="overlay" data-overlay></div>
-  
-      <a href="#" class="logo">
-        <h2 style="color: hsl(204, 76%, 55%);">SheShare Dream Destinations</h2>
-      </a>
-  
-      <nav class="navbar" data-navbar>
-        <ul class="navbar-list">
-  
-          <li>
-            <a href="#home" class="navbar-link" data-nav-link>Home</a>
-          </li>
-  
-          <li>
-            <a href="#safety" class="navbar-link" data-nav-link>Safety</a>
-          </li>
-  
-          <li>
-            <a href="#featured-car" class="navbar-link" data-nav-link>Adventure</a>
-          </li>
-  
-          <li>
-            <a href="#blog" class="navbar-link" data-nav-link>Community</a>
-          </li>
-  
-        </ul>
-      </nav>
-  
-      <div class="header-actions">
-  
-        <div class="header-contact">
-          <a href="tel:88002345678" class="contact-link">8 800 234 56 78</a>
-          <span class="contact-time">Mon - Sat: 9:00 am - 6:00 pm</span>
+    <header class="header" data-header>
+        <div class="container">
+            <div class="overlay" data-overlay></div>
+            <a href="#" class="logo">
+                <h2 style="color: hsl(204, 76%, 55%);">SheShare Dream Destinations</h2>
+            </a>
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+                    <li>
+                        <a href="#home" class="navbar-link" data-nav-link>Home</a>
+                    </li>
+                    <li>
+                        <a href="#safety" class="navbar-link" data-nav-link>Safety</a>
+                    </li>
+                    <li>
+                        <a href="#featured-car" class="navbar-link" data-nav-link>Adventure</a>
+                    </li>
+                    <li>
+                        <a href="#blog" class="navbar-link" data-nav-link>Community</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="header-contact">
+                    <a href="tel:88002345678" class="contact-link">8 800 234 56 78</a>
+                    <span class="contact-time">Mon - Sat: 9:00 am - 6:00 pm</span>
+                </div>
+                <a href="./view/register.html" class="btn register-btn" aria-labelledby="aria-label-txt">
+                    <ion-icon name="car-outline"></ion-icon>
+                    <span id="register-label">Register</span>
+                </a>
+                <a href="./view/login.html" class="btn user-btn" aria-label="Profile">
+                    <ion-icon name="person-outline"></ion-icon>
+                </a>
+                <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+                    <span class="one"></span>
+                    <span class="two"></span>
+                    <span class="three"></span>
+                </button>
+            </div>
         </div>
-  
-        <a href="./view/register.html" class="btn register-btn" aria-labelledby="aria-label-txt">
-          <ion-icon name="car-outline"></ion-icon>
-          <span id="register-label">Register</span>
-        </a>
-  
-        <a href="./view/login.html" class="btn user-btn" aria-label="Profile">
-          <ion-icon name="person-outline"></ion-icon>
-        </a>
-  
-        <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
-          <span class="one"></span>
-          <span class="two"></span>
-          <span class="three"></span>
-        </button>
-  
-      </div>
-  
+    </header>
+    <main style="margin: 90px 55px;">
+        <article>
+            <p style="font-size: 25px; margin-bottom: 30px;">Profile Data</p>
+            <div id="table-container">
+                <table id="data-table">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Date of Birth</th>
+                            <th>Email</th>
+                            <th>Mobile Number</th>
+                            <th>Nationality</th>
+                            <th>About Yourself</th>
+                            <th>Edit Data</th>
+                            <th>Delete Data</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </article>
+    </main>
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Edit Entry</h2>
+            <form id="editForm">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mobileNumber">Mobile Number:</label>
+                <input type="tel" id="mobileNumber" name="mobileNumber" required>
+                <label for="nationality">Nationality:</label>
+                <input type="text" id="nationality" name="nationality" required>
+                <label for="aboutYourself">About Yourself:</label>
+                <textarea id="aboutYourself" name="aboutYourself" rows="4" required></textarea>
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
     </div>
-  </header>
-
-
-
-
-
-  <main style="margin: 90px 290px 50px;">
-    <article>
-        <p style="font-size: 25px; margin-bottom: 30px;">Pofile Data</p>
-        <div id="table-container">
-            <table id="data-table">
-                <thead>
-                    <tr>
-                        <th>Full Name</th>
-                        <th>Date of Birth</th>
-                        <th>Email</th>
-                        <th>Mobile Number</th>
-                        <th>Nationality</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Data will be inserted here -->
-                </tbody>
-            </table>
-        </div>
-    </article>
-</main>
-
-
-
-
-    <!-- 
-    - #FOOTER
-  -->
-
     <footer class="footer">
         <div class="container">
-
             <div class="footer-top">
-
                 <div class="footer-brand">
                     <a href="#" class="logo">
                         <img src="../assets/images/logo.svg" alt="Ridex logo">
                     </a>
-
                     <p class="footer-text">
                         Search for cheap rental cars in New York. With a diverse fleet of 19,000 vehicles, Waydex offers
-                        its
-                        consumers an
-                        attractive and fun selection.
+                        its consumers an attractive and fun selection.
                     </p>
                 </div>
-
                 <ul class="footer-list">
-
                     <li>
                         <p class="footer-list-title">Company</p>
                     </li>
-
                     <li>
                         <a href="#" class="footer-link">About us</a>
                     </li>
-
                     <li>
                         <a href="#" class="footer-link">Pricing plans</a>
                     </li>
-
                     <li>
                         <a href="#" class="footer-link">Our blog</a>
                     </li>
-
                     <li>
                         <a href="#" class="footer-link">Contacts</a>
                     </li>
-
                 </ul>
-
                 <ul class="footer-list">
-
                     <li>
                         <p class="footer-list-title">Support</p>
                     </li>
-
                     <li>
                         <a href="#" class="footer-link">Help center</a>
                     </li>
-
                     <li>
                         <a href="#" class="footer-link">Ask a question</a>
                     </li>
-
                     <li>
                         <a href="#" class="footer-link">Privacy policy</a>
                     </li>
-
                     <li>
                         <a href="#" class="footer-link">Terms & conditions</a>
                     </li>
-
                 </ul>
-
                 <ul class="footer-list">
-
                     <li>
                         <p class="footer-list-title">Neighborhoods in New York</p>
                     </li>
-
                     <li>
                         <a href="#" class="footer-link">Manhattan</a>
                     </li>
-
                     <li>
                         <a href="#" class="footer-link">Central New York City</a>
                     </li>
-
                     <li>
                         <a href="#" class="footer-link">Upper East Side</a>
                     </li>
-
                     <li>
                         <a href="#" class="footer-link">Queens</a>
                     </li>
-
                     <li>
                         <a href="#" class="footer-link">Theater District</a>
                     </li>
-
                     <li>
                         <a href="#" class="footer-link">Midtown</a>
                     </li>
-
                     <li>
                         <a href="#" class="footer-link">SoHo</a>
                     </li>
-
                     <li>
                         <a href="#" class="footer-link">Chelsea</a>
                     </li>
-
                 </ul>
-
             </div>
-
             <div class="footer-bottom">
-
                 <ul class="social-list">
-
                     <li>
                         <a href="#" class="social-link">
                             <ion-icon name="logo-facebook"></ion-icon>
                         </a>
                     </li>
-
                     <li>
                         <a href="#" class="social-link">
                             <ion-icon name="logo-instagram"></ion-icon>
                         </a>
                     </li>
-
                     <li>
                         <a href="#" class="social-link">
                             <ion-icon name="logo-twitter"></ion-icon>
                         </a>
                     </li>
-
                     <li>
                         <a href="#" class="social-link">
                             <ion-icon name="logo-linkedin"></ion-icon>
                         </a>
                     </li>
-
                     <li>
                         <a href="#" class="social-link">
                             <ion-icon name="logo-skype"></ion-icon>
                         </a>
                     </li>
-
                     <li>
                         <a href="#" class="social-link">
                             <ion-icon name="mail-outline"></ion-icon>
                         </a>
                     </li>
-
                 </ul>
-
                 <p class="copyright">
                     &copy; 2022 <a href="#">codewithsadee</a>. All Rights Reserved
                 </p>
-
             </div>
-
         </div>
     </footer>
-
-
-
-
-
-    <!-- 
-    - custom js link
-  -->
     <script src="../assets/js/script.js"></script>
     <script>
-        // Fetch data from the API
-        fetch('http://localhost:3000/share')
-            .then(response => response.json())
-            .then(data => {
-                // Select the table body
-                const tableBody = document.querySelector('#data-table tbody');
-                // Iterate over the first five entries
-                data.slice(0, 5).forEach(entry => {
-                    // Create a new row
-                    const row = document.createElement('tr');
-                    // Populate row with data
-                    row.innerHTML = `
-                        <td>${entry.fullName}</td>
-                        <td>${entry.dob}</td>
-                        <td>${entry.email}</td>
-                        <td>${entry.mobileNumber}</td>
-                        <td>${entry.nationality}</td>
-                    `;
-                    // Append row to the table body
-                    tableBody.appendChild(row);
-                });
-            })
-            .catch(error => console.error('Error fetching data:', error));
-    </script>
-    
+        let currentEntryId;
 
-    <!-- 
-    - ionicon link
-  -->
+        function fetchDataAndPopulateTable() {
+            fetch('http://localhost:3000/share')
+                .then(response => response.json())
+                .then(data => {
+                    const tableBody = document.querySelector('#data-table tbody');
+                    tableBody.innerHTML = ''; 
+                    data.forEach(entry => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${entry.fullName}</td>
+                            <td>${entry.dob}</td>
+                            <td>${entry.email}</td>
+                            <td>${entry.mobileNumber}</td>
+                            <td>${entry.nationality}</td>
+                            <td>${entry.aboutYourself}</td>
+                            <td>
+    <button class="edit-btn" onclick="editEntry('${entry.id}')">Edit</button>
+</td>
+<td>
+    <button class="delete-btn" onclick="deleteEntry('${entry.id}')">Delete</button>
+</td>
+
+                        `;
+                        tableBody.appendChild(row);
+                    });
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        }
+
+        function editEntry(id) {
+            currentEntryId = id;
+            fetch(`http://localhost:3000/share/${id}`)
+                .then(response => response.json())
+                .then(entry => {
+                    document.getElementById('fullName').value = entry.fullName;
+                    document.getElementById('dob').value = entry.dob;
+                    document.getElementById('email').value = entry.email;
+                    document.getElementById('mobileNumber').value = entry.mobileNumber;
+                    document.getElementById('nationality').value = entry.nationality;
+                    document.getElementById('aboutYourself').value = entry.aboutYourself;
+                    document.getElementById('editModal').style.display = 'block';
+                })
+                .catch(error => console.error('Error fetching entry:', error));
+        }
+
+        function closeModal() {
+            document.getElementById('editModal').style.display = 'none';
+        }
+
+        document.getElementById('editForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const editedData = {
+                fullName: document.getElementById('fullName').value,
+                dob: document.getElementById('dob').value,
+                email: document.getElementById('email').value,
+                mobileNumber: document.getElementById('mobileNumber').value,
+                nationality: document.getElementById('nationality').value,
+                aboutYourself: document.getElementById('aboutYourself').value
+            };
+
+            fetch(`http://localhost:3000/share/${currentEntryId}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(editedData),
+            })
+            .then(response => {
+                if (response.ok) {
+                    closeModal(); 
+                    fetchDataAndPopulateTable();
+                } else {
+                    throw new Error('Failed to update entry');
+                }
+            })
+            .catch(error => console.error('Error updating entry:', error));
+        });
+
+        function deleteEntry(id) {
+            if (confirm("Are you sure you want to delete this entry?")) {
+                fetch(`http://localhost:3000/share/${id}`, {
+                    method: 'DELETE'
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            fetchDataAndPopulateTable(); // Refresh table after deletion
+                        } else {
+                            throw new Error('Failed to delete entry');
+                        }
+                    })
+                    .catch(error => console.error('Error deleting entry:', error));
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchDataAndPopulateTable);
+    </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
-
 </html>
