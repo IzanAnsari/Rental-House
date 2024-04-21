@@ -14,24 +14,34 @@
       "id": "db6d",
       "email": "izanansari123@gmail.com",
       "password": "123"
+    },
+    {
+      "id": "0136",
+      "email": "zayyan@12121212121",
+      "password": "123"
+    },
+    {
+      "id": "9d5b",
+      "email": "izanansari123@gmail.com",
+      "password": "12345"
     }
   ],
   "share": [
     {
-      "id": "649f",
+      "id": "540c",
       "fullName": "Izan Anasri",
-      "dob": "1212-12-12",
+      "dob": "2000-12-23",
       "email": "izanansari123@gmail.com",
       "mobileNumber": "09359237760",
       "nationality": "Indian",
       "occupation": "engineer",
-      "checkInDate": "0121-12-12",
-      "checkOutDate": "1212-12-12",
+      "checkInDate": "2024-04-09",
+      "checkOutDate": "2024-04-30",
       "destination": "200",
-      "interest": "IZAI",
-      "hobbies": "ASKA",
-      "image": "https://st.hzcdn.com/simgs/pictures/bedrooms/young-adult-female-bedroom-moda-interiors-img~b88174fa0a698a54_14-7136-1-6374806.jpg",
-      "aboutYourself": "IZANAAASA"
+      "interest": "gamming",
+      "hobbies": "reading books",
+      "image": "https://www.thespruce.com/thmb/PVSOLeZZiZGmtYS0DZlruA345Xg=/4000x0/filters:no_upscale():max_bytes(150000):strip_icc()/bedroom-ideas-for-girls-4136951-hero-4ee4db4f8c55458c83a7a1ece7ed90d3.jpg",
+      "aboutYourself": "My name is Izan Ansari. Living in Bangalore"
     }
   ],
   "rent": [
