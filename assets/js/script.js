@@ -62,7 +62,6 @@ document.addEventListener("DOMContentLoaded", function() {
       // Hide user icon
       userBtn.style.display = "none";
     }
-    
   });
   
   userBtn.addEventListener("click", function(event) {
@@ -76,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
       userBtn.style.display = "inline-block";
     } else {
       // Redirect to login page
-      window.location.href = "./view/login.html";
+      window.location.href = "./login.html";
     }
   });
 });
