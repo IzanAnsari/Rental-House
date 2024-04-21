@@ -33,6 +33,9 @@ document.addEventListener("DOMContentLoaded", function() {
         event.preventDefault();
         
         // Redirect to index.html when the button is clicked
-        window.location.href = "../index.html";
+        window.location.href = "./login.html";
     });
 });
+
+
+

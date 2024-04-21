@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
       userBtn.style.display = "inline-block";
     } else {
       // Redirect to login page
-      window.location.href = "./login.html";
+      window.location.href = "./view/login.html";
     }
   });
 });
